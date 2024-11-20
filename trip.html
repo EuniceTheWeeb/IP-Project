@@ -7,8 +7,161 @@
     <link rel="stylesheet" href="styles.css">
     <title>Trip</title>
 </head>
-<body>
 
+<body>
+    <h1 id="tripName">trip name</h1>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Create new card
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item activity" title="Add New Activity" href="#">logo</a></li>
+        <li><a class="dropdown-item accommodation" title="Add New Accommodation" href="#">hotel</a></li>
+        <li><a class="dropdown-item transport" title="Add New Travel" href="#">transport</a></li>
+      </ul>
+    </div>
+    <br>
+
+    <div class="card hotelCard">
+        <div class="card-header">
+            <input type="checkbox" class="selectCard">
+            <label> Accommodation: </h2>
+        <input type="text">
+        </div>
+        <div class="card-body">
+
+        <label>Check-in Date</label>
+        <input type="date"><br>
+        <label>Check-out Date</label>
+        <input type="date"><br>
+
+        <label>Address</label>
+        <input type="text">
+        <button class="markerBtn">Mark on map</button>
+        <br>
+
+        <label>Website</label>
+        <input type="text">
+        <button class="toSIteBtn">Go to site</button><br>
+
+        <label>Notes</label>
+        <input type="input"><br>
+
+          <h5 class="card-title">accommodation name</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary saveBtn">Save card</a>
+          <a href="#" class="btn btn-primary editBtn">Edit card</a>
+          <a href="#" class="btn btn-primary delBtn">Delete card</a>
+        </div>
+      </div>
+
+      <div class="card activityCard">
+        <div class="card-header">
+            <input type="checkbox" class="selectCard">
+            <label>activity name</h2>
+            <input type="text">
+        </div>
+
+        <div class="card-body">
+            <label>Date</label>
+            <input type="date">
+    
+            <select name="category" id="category">
+                <option value="Shopping">Shopping</option>
+                <option value="Food">Food</option>
+                <option value="Sightseeing">Sightseeing</option>
+                <option value="Museum">Museum</option>
+                <option value="Adventure">Adventure</option>
+            </select><br>
+    
+            <label>Address</label>
+            <input type="text">
+            <button class="markerBtn">Add marker to map</button>
+            <br>
+    
+            <label>Website</label>
+            <input type="text">
+            <button class="toSIteBtn">Go to site</button><br>
+    
+            <label>Notes</label>
+            <input type="input"><br>
+
+          <h5 class="card-title">accommodation name</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary saveBtn">Save card</a>
+          <a href="#" class="btn btn-primary editBtn">Edit card</a>
+          <a href="#" class="btn btn-primary delBtn">Delete card</a>
+        </div>
+      </div>
+
+      <div class="card activityCard">
+        <div class="card-header">
+
+          <input type="checkbox" class="selectCard">
+          
+            <label> Transport: </h2>
+        <input type="text">  
+        </div>
+
+        <div class="card-body">
+          <div id="flightNum">
+            <label>Flight number</label>
+            <input type="text"><br>
+          </div>
+          
+        <label>Mode of Transport</label>
+        <input type="radio" id="flight" name="transport" value="Flight">
+        <label for="flight">Flight</label>
+
+        <input type="radio" id="ferry" name="transport" value="Ferry">
+        <label for="ferry">Ferry</label>
+        <input type="radio" id="train" name="transport" value="train">
+        <label for="train">Train</label>
+        <input type="radio" id="bus" name="transport" value="bus">
+        <label for="bus">Bus</label>
+        <input type="radio" id="car" name="transport" value="Car">
+        <label for="car">Car</label><br>
+
+        <label>Date</label>
+        <input type="date"><br>
+
+        <label>Address</label>
+        <input type="text">
+        <button class="markerBtn">Add marker to map</button>
+        <br>
+
+        <label>Website</label>
+        <input type="text">
+        <button class="toSIteBtn">Go to site</button><br>
+
+        <label>Notes</label>
+        <input type="input"><br>
+
+
+          <h5 class="card-title">accommodation name</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary saveBtn">Save card</a>
+          <a href="#" class="btn btn-primary editBtn">Edit card</a>
+          <a href="#" class="btn btn-primary delBtn">Delete card</a>
+        </div>
+      </div>
+
+
+    <div class="temp">
+        <button class="moveBtn">Move this card to another trip</button>
+        <!-- dropdown for list of trips w/ dates-->
+
+    </div>
+
+    <button id="delTrip">Delete this trip</button>
+    <!-- add alert, then go back to home -->
+
+    
+
+    <section class="bsb-timeline-4 bg-success">
+        <div class="container"></div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

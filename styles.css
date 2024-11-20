@@ -1,0 +1,56 @@
+:root {
+    --bs-primary: #1F6AC1;  /* Primary Color */
+    --bs-secondary: #FFC571; /* Secondary Color */
+    --bs-accent: #D5D5D5;    /* Accent Color */
+    --bs-neutral-light: #F6EFDF; /* Neutral Light Color */
+    --bs-neutral-dark: #1C411C;  /* Neutral Dark Color */
+}
+
+
+/* Body Background Color */
+body {
+    color: var(--bs-neutral-dark);
+  }
+  
+  /* Navbar using primary color */
+  .navbar {
+    background-color: var(--bs-primary);
+  }
+  
+  button {
+    color: var(--bs-neutral-light);
+  }
+
+  /* Primary buttons */
+  .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+  
+  /* Secondary buttons */
+  .btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+  }
+  
+  /* Accent text */
+  h1, h2, h3, .highlight-text {
+    color: var(--bs-accent);
+  }
+
+  input {
+   margin: .5rem; 
+  }
+
+  input[type="text"] {
+    width: 10rem;
+  }
+
+.travelInfo {
+    margin-bottom: 2rem;
+}
+
+#createTripBtn {
+    margin: 2rem;
+    font-weight: bold;
+}
