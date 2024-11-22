@@ -6,6 +6,10 @@
     --bs-neutral-dark: #1C411C;  /* Neutral Dark Color */
 }
 
+* {
+  justify-content: center;
+  align-items: center;
+}
 
 /* Body Background Color */
 body {
@@ -35,7 +39,7 @@ body {
   
   /* Accent text */
   h1, h2, h3, .highlight-text {
-    color: var(--bs-accent);
+    color: var(--bs-neutral-dark);
   }
 
   input {
