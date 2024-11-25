@@ -22,6 +22,7 @@ body {
   
   button {
     color: var(--bs-neutral-light);
+    cursor: pointer;
   }
 
   /* Primary buttons */
@@ -62,8 +63,13 @@ body {
     margin-right: 2rem;
   }
 
+  label {
+    cursor: pointer;
+  }
+
   input {
    margin: .5rem; 
+   cursor: pointer;
   }
 
   input[type="text"] {
@@ -82,4 +88,20 @@ body {
 #createTripBtn {
     margin: 2rem;
     font-weight: bold;
+}
+
+
+/* Container for horizontal scroll */
+.card-container {
+  width: 20rem;
+  display: flex;                /* Align cards in a row */
+  overflow-x: auto;             /* Enable horizontal scroll */
+  white-space: nowrap;          /* Prevent cards from wrapping */
+  padding: 10px 0;              /* Optional padding for better appearance */
+}
+
+/* Make sure cards are displayed inline */
+.card {
+  flex: 0 0 auto;               /* Prevent cards from stretching */
+  margin-right: 10px;           /* Optional margin between cards */
 }

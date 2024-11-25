@@ -1,5 +1,9 @@
+let trips = [
 
-// for undecided checkbox on "New Trip"
+]
+
+
+// "undecided" checkbox
 document.querySelector("#goingCheck").addEventListener("click", function () {
   const inputs = goingInfo.querySelectorAll('input');
   if (document.querySelector("#goingCheck").checked === true) {
@@ -13,9 +17,21 @@ document.querySelector("#goingCheck").addEventListener("click", function () {
   }
 });
 
+document.querySelector("#returnCheck").addEventListener("click", function () {
+  const inputs = returnInfo.querySelectorAll('input');
+  if (document.querySelector("#returnCheck").checked === true) {
+    inputs.forEach(function (input) {
+      input.disabled = true;
+    });
+  } else {
+    inputs.forEach(function (input) {
+      input.disabled = false;
+    });
+  }
+});
 
-// for flight/ferry/bus number
-function checkTransport() {
+// make flight/ferry/bus number div appear
+function checkGoing() {
   const goingRadio = document.querySelector(".goingTransport:checked");
 
   document.querySelectorAll("#goingFlightNum, #goingFerryNum, #goingBusNum").forEach(function (div) {
@@ -36,6 +52,32 @@ function checkTransport() {
 }
 
 document.querySelectorAll(".goingTransport").forEach(function (radio) {
-  radio.addEventListener('click', checkTransport);
+  radio.addEventListener('click', checkGoing);
 });
-checkTransport();
+checkGoing();
+
+function checkReturn() {
+  const returnRadio = document.querySelector(".returnTransport:checked");
+
+  document.querySelectorAll("#returnFlightNum, #returnFerryNum, #returnBusNum").forEach(function (div) {
+    div.style.display = 'none';
+  });
+
+  if (returnRadio) {
+    let selectedValue = returnRadio.value;
+
+    if (selectedValue === "Flight") {
+      document.querySelector("#returnFlightNum").style.display = 'block';
+    } else if (selectedValue === "Ferry") {
+      document.querySelector("#returnFerryNum").style.display = 'block';
+    } else if (selectedValue === "Bus") {
+      document.querySelector("#returnBusNum").style.display = 'block';
+    }
+  }
+}
+
+document.querySelectorAll(".returnTransport").forEach(function (radio) {
+  radio.addEventListener('click', checkReturn);
+});
+checkReturn();
+
