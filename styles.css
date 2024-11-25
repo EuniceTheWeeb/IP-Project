@@ -1,14 +1,13 @@
 :root {
     --bs-primary: #1F6AC1;  /* Primary Color */
-    --bs-secondary: #FFC571; /* Secondary Color */
-    --bs-accent: #D5D5D5;    /* Accent Color */
-    --bs-neutral-light: #F6EFDF; /* Neutral Light Color */
-    --bs-neutral-dark: #1C411C;  /* Neutral Dark Color */
+    --bs-secondary: #1C411C; /* Secondary Color */
+    --bs-accent: #f5e9cc;    /* Accent Color */
+    --bs-neutral-light: #FFC571; /* Neutral Light Color */
+    --bs-neutral-dark: black;  /* Neutral Dark Color */
 }
 
 * {
-  justify-content: center;
-  align-items: center;
+  margin: 0;
 }
 
 /* Body Background Color */
@@ -40,6 +39,27 @@ body {
   /* Accent text */
   h1, h2, h3, .highlight-text {
     color: var(--bs-neutral-dark);
+    margin: 1rem;
+  }
+
+  #toAddPg {
+    font-weight: bold;
+    margin: 2rem auto;
+  }
+
+  table {
+    margin: 2rem 0;
+  }
+
+  #prev,
+  #next {
+    font-size: 20px;
+  }
+  #prev {
+    margin-left: 2rem;
+  }
+  #next {
+    margin-right: 2rem;
   }
 
   input {
@@ -48,6 +68,11 @@ body {
 
   input[type="text"] {
     width: 10rem;
+  }
+
+  input[type="checkbox"] {
+    width:20px;
+    height:20px;
   }
 
 .travelInfo {

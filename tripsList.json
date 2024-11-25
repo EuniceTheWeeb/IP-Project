@@ -1,0 +1,28 @@
+[
+    {
+        "id": ,
+        "trip name": "",
+        "going date": ,
+        "return date": ,
+        "going travel": {
+            "undecided": false,
+        "mode of transport": "flight",
+        "flight number": "SQ003",
+        "departure date & time": ,
+        "arrival date & time": ,
+        "duration": "",
+        "alert for upcoming travel": ""
+        },
+        "return travel": {
+            "undecided": false,
+        "mode of transport": "flight",
+        "flight number": "SQ003",
+        "departure date & time": ,
+        "arrival date & time": ,
+        "duration": "",
+        "alert for upcoming travel": ""
+        },
+        
+        
+    },
+]
