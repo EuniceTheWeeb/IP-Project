@@ -1,118 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <title>Trip</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Trip</title>
 </head>
 
 <body>
-    <h1 id="tripName">trip name</h1>
+  <h1 id="tripName">trip name</h1>
 
+  <div class="card">
+    <div class="card-header">
+      <h2>Add new card</h2>
+    </div>
+    <a class="btn btn-primary activity" title="Add New Activity" href="#">+ activity</a><br>
+    <!-- btn CTA: + (activity logo) -->
+    <a class="btn btn-primary accommodation" title="Add New Accommodation" href="#">+ hotel</a>
+    <!-- btn CTA: + (hotel logo) -->
+  </div>
+  </div>
 
-    <br>
+  <div class="card hotelCard">
+    <div class="card-header">
+      <input type="checkbox" class="selectCard">
+      <label> Accommodation: </h2>
+        <input type="text">
+    </div>
+    <div class="card-body">
 
-    <div class="card hotelCard">
-      <div class="card-header">
-        <h2>Add new card</h2>
-      </div>
-      <a class="activity" title="Add New Activity" href="#">logo</a>
-      <!-- btn CTA: + (activity logo) -->
-        <a class="accommodation" title="Add New Accommodation" href="#">hotel</a>
-          <!-- btn CTA: + (hotel logo) -->
-      </div>
+      <label>Check-in Date</label>
+      <input type="date"><br>
+      <label>Check-out Date</label>
+      <input type="date"><br>
+
+      <label>Address</label>
+      <input type="text">
+      <button class="btn btn-primary markerBtn">Mark on map</button>
+      <br>
+
+      <label>Website</label>
+      <input type="text">
+      <button class="btn btn-primary toSiteBtn">Go to site</button><br>
+
+      <label>Notes</label>
+      <input type="input"><br>
+
+      <a href="#" class="btn btn-primary saveBtn">Save card</a>
+      <!-- blur eventlistener -->
+      <a href="#" class="btn btn-primary editBtn">Edit card</a>
+      <a href="#" class="btn btn-primary delBtn">Delete card</a>
+    </div>
+  </div>
+
+  <div class="card activityCard">
+    <div class="card-header">
+      <input type="checkbox" class="selectCard">
+      <label>Activity: </h2>
+        <input type="text">
     </div>
 
-    <div class="card hotelCard">
-        <div class="card-header">
-            <input type="checkbox" class="selectCard">
-            <label> Accommodation: </h2>
-        <input type="text">
-        </div>
-        <div class="card-body">
+    <div class="card-body">
+      <label>Date</label>
+      <input type="date">
 
-        <label>Check-in Date</label>
-        <input type="date"><br>
-        <label>Check-out Date</label>
-        <input type="date"><br>
+      <select name="category" id="category">
+        <option value="Shopping">Shopping</option>
+        <option value="Food">Food</option>
+        <option value="Sightseeing">Sightseeing</option>
+        <option value="Museum">Museum</option>
+        <option value="Adventure">Adventure</option>
+      </select><br>
 
-        <label>Address</label>
-        <input type="text">
-        <button class="markerBtn">Mark on map</button>
-        <br>
+      <label>Address</label>
+      <input type="text">
+      <button class="btn btn-primary markerBtn">Mark on map</button>
+      <br>
 
-        <label>Website</label>
-        <input type="text">
-        <button class="toSiteBtn">Go to site</button><br>
+      <label>Website</label>
+      <input type="text">
+      <button class="btn btn-primary toSiteBtn">Go to site</button><br>
 
-        <label>Notes</label>
-        <input type="input"><br>
+      <label>Notes</label>
+      <input type="input"><br>
 
-          <a href="#" class="btn btn-primary saveBtn">Save card</a>
-          <!-- blur eventlistener -->
-          <a href="#" class="btn btn-primary editBtn">Edit card</a>
-          <a href="#" class="btn btn-primary delBtn">Delete card</a>
-        </div>
-      </div>
-
-      <div class="card activityCard">
-        <div class="card-header">
-            <input type="checkbox" class="selectCard">
-            <label>Activity: </h2>
-            <input type="text">
-        </div>
-
-        <div class="card-body">
-            <label>Date</label>
-            <input type="date">
-    
-            <select name="category" id="category">
-                <option value="Shopping">Shopping</option>
-                <option value="Food">Food</option>
-                <option value="Sightseeing">Sightseeing</option>
-                <option value="Museum">Museum</option>
-                <option value="Adventure">Adventure</option>
-            </select><br>
-    
-            <label>Address</label>
-            <input type="text">
-            <button class="markerBtn">Mark on map</button>
-            <br>
-    
-            <label>Website</label>
-            <input type="text">
-            <button class="toSiteBtn">Go to site</button><br>
-    
-            <label>Notes</label>
-            <input type="input"><br>
-
-          <a href="#" class="btn btn-primary saveBtn">Save card</a>
-          <a href="#" class="btn btn-primary editBtn">Edit card</a>
-          <a href="#" class="btn btn-primary delBtn">Delete card</a>
-        </div>
-      </div>
-
-
-
+      <a href="#" class="btn btn-primary saveBtn">Save card</a>
+      <a href="#" class="btn btn-primary editBtn">Edit card</a>
+      <a href="#" class="btn btn-primary delBtn">Delete card</a>
     </div>
+  </div>
 
 
 
-    <button id="markCards">Mark selected as done</button>
-    <button id="delCards">Delete selected</button>
-    <button id="delTrip">Delete this trip</button>
-    <!-- add alert, then go back to home -->
+  </div>
 
-    
 
-    <section class="bsb-timeline-4 bg-success">
-        <div class="container"></div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+  <button class="btn btn-primary" id="markCards">Mark selected as done</button>
+  <button class="btn btn-primary" id="delCards">Delete selected</button>
+  <button class="btn btn-primary" id="delTrip">Delete this trip</button>
+  <!-- add alert, then go back to home -->
+
+
+
+  <section class="bsb-timeline-4 bg-success">
+    <div class="container"></div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
