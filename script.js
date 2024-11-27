@@ -80,4 +80,3 @@ document.querySelectorAll(".returnTransport").forEach(function (radio) {
   radio.addEventListener('click', checkReturn);
 });
 checkReturn();
-
