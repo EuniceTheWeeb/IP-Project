@@ -1,8 +1,10 @@
-let trips = [
+let trips = []
 
-]
+// MARK: home pg
 
 
+
+// MARK: new trip pg
 // "undecided" checkbox
 document.querySelector("#goingCheck").addEventListener("click", function () {
   const inputs = goingInfo.querySelectorAll('input');
@@ -80,3 +82,11 @@ document.querySelectorAll(".returnTransport").forEach(function (radio) {
   radio.addEventListener('click', checkReturn);
 });
 checkReturn();
+
+// alert for upcoming flight
+
+alert("You have an upcoming flight!")
+
+// create trip btn
+
+

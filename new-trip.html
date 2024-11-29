@@ -13,7 +13,7 @@
 <body>
     <div class="justify-content-between align-items-center col-8 mx-auto" id="baseDate">
         <h1>Planning New Trip</h1>
-        <input type="text" placeholder="Trip Name"><br>
+        <input type="text" placeholder="Trip Name" id="tripName"><br>
         <label>Going date</label>
         <input type="date">
         <label>Return date</label>
@@ -64,12 +64,11 @@
                     <input type="number">
                     <label>hours</label>
                     <input type="number">
-                    <label>min</label>
-                    <input type="text"><br>
+                    <label>min</label><br>
 
                     <!-- need to modify for alert, btw 1 week to 24hrs -->
                     <label>Alert for upcoming travel</label>
-                    <input type="datetime-local">
+                    <input type="datetime-local" id="goingAlert">
                 </div>
             </div>
         </div>
@@ -122,12 +121,11 @@
                     <input type="number">
                     <label>hours</label>
                     <input type="number">
-                    <label>min</label>
-                    <input type="text"><br>
+                    <label>min</label><br>
 
                     <!-- need to modify for alert, btw 1 week to 24hrs -->
                     <label>Alert for upcoming travel</label>
-                    <input type="datetime-local">
+                    <input type="datetime-local" id="returnAlert">
 
                 </div>
             </div>
