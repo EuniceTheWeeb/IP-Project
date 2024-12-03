@@ -1,30 +1,294 @@
-// 3D2N-Thailand, 4D3N-Bali, 7D6N-Australia
-
 [
+    // MARK: 3D2N to Thailand
     {
-        "id": ,
-        "trip name": "",
-        "going date": ,
-        "return date": ,
+        "id": 1,
+        "trip name": "3D2N Adventure in Thailand",
+        "going date": "2024-12-10",
+        "return date": "2024-12-12",
         "going travel": {
             "undecided": false,
-        "mode of transport": "flight",
-        "flight number": "SQ003",
-        "departure date & time": ,
-        "arrival date & time": ,
-        "duration": "",
-        "alert for upcoming travel": ""
+            "mode of transport": "flight",
+            "flight number": "TG409",
+            "departure date & time": "2024-12-10T08:30",
+            "arrival date & time": "2024-12-10T09:15",
+            "duration": {
+                "hours": "2",
+                "minutes": "45"
+            },
+            "alert for upcoming travel": "2024-12-09T07:00"
         },
         "return travel": {
             "undecided": false,
-        "mode of transport": "flight",
-        "flight number": "SQ003",
-        "departure date & time": ,
-        "arrival date & time": ,
-        "duration": "",
-        "alert for upcoming travel": ""
+            "mode of transport": "flight",
+            "flight number": "TG410",
+            "departure date & time": "2024-12-12T19:00",
+            "arrival date & time": "2024-12-12T22:45",
+            "duration": {
+                "hours": "2",
+                "minutes": "45"
+            },
+            "alert for upcoming travel": "2024-12-11T20:30"
         },
-        
-        
+        "accommodation": {
+            "id": "H101",
+            "name": "Bangkok Riverside Hotel",
+            "check-in date": "2024-12-10",
+            "check-out date": "2024-12-12",
+            "address": "123 Chao Phraya River, Bangkok, Thailand",
+            "website": "https://www.bangkokriversidehotel.com",
+            "notes": "A luxury hotel by the river with amazing views of the city and close to cultural sites."
+        },
+        "activities": [
+            {
+                "id": "A101",
+                "activity name": "Visit Grand Palace",
+                "date": "2024-12-10",
+                "category": "Sightseeing",
+                "address": "Na Phra Lan Road, Phra Nakhon, Bangkok",
+                "website": "https://www.grandpalacebangkok.com",
+                "notes": "Explore the iconic Grand Palace and the Emerald Buddha Temple."
+            },
+            {
+                "id": "A102",
+                "activity name": "Explore Chatuchak Market",
+                "date": "2024-12-11",
+                "category": "Shopping",
+                "address": "Chatuchak, Bangkok, Thailand",
+                "website": "https://www.chatuchakmarket.com",
+                "notes": "A famous weekend market offering everything from clothes to food and art."
+            },
+            {
+                "id": "A103",
+                "activity name": "Thai Food Cooking Class",
+                "date": "2024-12-11",
+                "category": "Food",
+                "address": "Baan Thai Cookery School, Bangkok",
+                "website": "https://www.baanthaicooking.com",
+                "notes": "Learn how to cook authentic Thai dishes from professional chefs."
+            },
+            {
+                "id": "A104",
+                "activity name": "Visit Ayutthaya Historical Park",
+                "date": "2024-12-12",
+                "category": "Sightseeing",
+                "address": "Ayutthaya, Thailand",
+                "website": "https://www.ayutthayatravel.com",
+                "notes": "Explore the ancient capital of Siam with its well-preserved ruins and temples."
+            }
+        ]
     },
+    // MARK: 4D3N to Bali
+    {
+        "id": 2,
+        "trip name": "4D3N Bali Getaway",
+        "going date": "2024-12-15",
+        "return date": "2024-12-18",
+        "going travel": {
+            "undecided": false,
+            "mode of transport": "ferry",
+            "ferry number": "BALI123",
+            "departure date & time": "2024-12-15T10:30",
+            "arrival date & time": "2024-12-15T12:00",
+            "duration": {
+                "hours": "1",
+                "minutes": "30"
+            },
+            "alert for upcoming travel": "2024-12-14T20:00"
+        },
+        "return travel": {
+            "undecided": false,
+            "mode of transport": "ferry",
+            "ferry number": "BALI124",
+            "departure date & time": "2024-12-18T19:30",
+            "arrival date & time": "2024-12-18T21:00",
+            "duration": {
+                "hours": "1",
+                "minutes": "30"
+            },
+            "alert for upcoming travel": "2024-12-18T14:00"
+        },
+        "accommodation": {
+            "id": "H201",
+            "name": "Bali Paradise Resort",
+            "check-in date": "2024-12-15",
+            "check-out date": "2024-12-18",
+            "address": "Jl. Raya Ubud No. 45, Ubud, Bali, Indonesia",
+            "website": "https://www.baliparadiseresort.com",
+            "notes": "A luxury resort in the heart of Ubud, with stunning views of the rice terraces and close to cultural attractions."
+        },
+        "activities": [
+            {
+                "id": "A201",
+                "activity name": "Visit Uluwatu Temple",
+                "date": "2024-12-15",
+                "category": "Sightseeing",
+                "address": "Pura Uluwatu, Pecatu, Bali",
+                "website": "https://www.puraundewatubali.com",
+                "notes": "A cliffside temple overlooking the ocean, famous for its sunset views and traditional Kecak dance performances."
+            },
+            {
+                "id": "A202",
+                "activity name": "Beach Day at Nusa Dua",
+                "date": "2024-12-16",
+                "category": "Sightseeing",
+                "address": "Nusa Dua, Bali, Indonesia",
+                "website": "https://www.nusadua.com",
+                "notes": "Enjoy the beautiful white-sand beaches and calm waters of Nusa Dua, ideal for swimming and relaxation."
+            },
+            {
+                "id": "A203",
+                "activity name": "Balinese Spa and Massage",
+                "date": "2024-12-16",
+                "category": "Adventure",
+                "address": "Bali Orchid Spa, Seminyak",
+                "website": "https://www.baliorchidsparadise.com",
+                "notes": "Relax and rejuvenate with a traditional Balinese massage and spa treatment."
+            },
+            {
+                "id": "A204",
+                "activity name": "Explore Sacred Monkey Forest Sanctuary",
+                "date": "2024-12-17",
+                "category": "Sightseeing",
+                "address": "Jl. Monkey Forest, Ubud, Bali",
+                "website": "https://www.monkeyforestubud.com",
+                "notes": "Walk through the lush forest and interact with the playful long-tailed macaques at this sacred site."
+            },
+            {
+                "id": "A205",
+                "activity name": "Sunset Dinner Cruise",
+                "date": "2024-12-17",
+                "category": "Food",
+                "address": "Bali Marina, Benoa, Bali",
+                "website": "https://www.balisunsetcruise.com",
+                "notes": "A luxurious evening cruise with dinner and spectacular views of Bali's coastline during sunset."
+            },
+            {
+                "id": "A206",
+                "activity name": "Visit Tegallalang Rice Terraces",
+                "date": "2024-12-18",
+                "category": "Sightseeing",
+                "address": "Tegallalang, Ubud, Bali",
+                "website": "https://www.balitourism.com/tegallalang-rice-terraces",
+                "notes": "Admire the breathtaking terraced rice fields and take photos of this iconic Bali landscape."
+            }
+        ]
+    },
+    // MARK: 7D6N to Australia
+    {
+        "id": 3,
+        "trip name": "7D6N Australia Adventure",
+        "going date": "2024-12-20",
+        "return date": "2024-12-27",
+        "going travel": {
+            "undecided": true,
+            "mode of transport": "undecided",
+            "ferry number": "",
+            "flight number": "",
+            "departure date & time": "",
+            "arrival date & time": "",
+            "duration": {
+                "hours": "",
+                "minutes": ""
+            },
+            "alert for upcoming travel": ""
+        },
+        "return travel": {
+            "undecided": true,
+            "mode of transport": "undecided",
+            "ferry number": "",
+            "flight number": "",
+            "departure date & time": "",
+            "arrival date & time": "",
+            "duration": {
+                "hours": "",
+                "minutes": ""
+            },
+            "alert for upcoming travel": ""
+        },
+        "accommodation": [
+            {
+                "id": "H301",
+                "name": "Sydney Harbour Hotel",
+                "check-in date": "2024-12-20",
+                "check-out date": "2024-12-23",
+                "address": "123 Sydney Harbour Road, Sydney, Australia",
+                "website": "https://www.sydneyharbourhotel.com.au",
+                "notes": "A luxury hotel with stunning views of Sydney Opera House, located near major attractions like the Royal Botanic Gardens and Circular Quay."
+            },
+            {
+                "id": "H302",
+                "name": "Melbourne City Retreat",
+                "check-in date": "2024-12-23",
+                "check-out date": "2024-12-27",
+                "address": "456 Collins Street, Melbourne, Australia",
+                "website": "https://www.melbournecityretreat.com.au",
+                "notes": "Modern boutique hotel in the heart of Melbourne, with easy access to shopping, dining, and the Melbourne Zoo."
+            }
+        ],
+        "activities": [
+            {
+                "id": "A301",
+                "activity name": "Sydney Opera House Tour",
+                "date": "2024-12-20",
+                "category": "Sightseeing",
+                "address": "Bennelong Point, Sydney, Australia",
+                "website": "https://www.sydneyoperahouse.com",
+                "notes": "Explore one of the most iconic buildings in the world with a guided tour of the Sydney Opera House."
+            },
+            {
+                "id": "A302",
+                "activity name": "Visit Bondi Beach",
+                "date": "2024-12-21",
+                "category": "Sightseeing",
+                "address": "Bondi Beach, Sydney, Australia",
+                "website": "https://www.bondibeach.org",
+                "notes": "Relax and enjoy the surf at Sydney's most famous beach, with plenty of cafes and shopping nearby."
+            },
+            {
+                "id": "A303",
+                "activity name": "Sydney Harbour Bridge Climb",
+                "date": "2024-12-21",
+                "category": "Adventure",
+                "address": "Sydney Harbour Bridge, Sydney, Australia",
+                "website": "https://www.bridgeclimb.com",
+                "notes": "Climb the Sydney Harbour Bridge for stunning panoramic views of the city and harbor."
+            },
+            {
+                "id": "A304",
+                "activity name": "Melbourne City Walking Tour",
+                "date": "2024-12-23",
+                "category": "Sightseeing",
+                "address": "Federation Square, Melbourne, Australia",
+                "website": "https://www.melbournewalkingtours.com",
+                "notes": "Take a walking tour through Melbourne's laneways, street art, and historic landmarks."
+            },
+            {
+                "id": "A305",
+                "activity name": "Visit Great Ocean Road",
+                "date": "2024-12-24",
+                "category": "Sightseeing",
+                "address": "Great Ocean Road, Melbourne, Australia",
+                "website": "https://www.greatoceanroad.com.au",
+                "notes": "Enjoy a scenic drive along one of the most beautiful coastal roads in the world."
+            },
+            {
+                "id": "A306",
+                "activity name": "Phillip Island Penguin Parade",
+                "date": "2024-12-25",
+                "category": "Sightseeing",
+                "address": "Phillip Island, Victoria, Australia",
+                "website": "https://www.penguinparade.com.au",
+                "notes": "Watch the adorable little penguins return to their burrows after a day at sea."
+            },
+            {
+                "id": "A307",
+                "activity name": "Melbourne Zoo Visit",
+                "date": "2024-12-26",
+                "category": "Sightseeing",
+                "address": "Elliott Ave, Parkville, Melbourne, Australia",
+                "website": "https://www.zoo.org.au/melbourne",
+                "notes": "Explore Melbourne's zoo to see native Australian animals, including kangaroos, koalas, and wombats."
+            }
+        ]
+    }
 ]

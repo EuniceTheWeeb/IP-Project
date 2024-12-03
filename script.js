@@ -85,7 +85,9 @@ checkReturn();
 
 // alert for upcoming flight
 
-alert("You have an upcoming flight!")
+
+
+
 
 // create trip btn
 

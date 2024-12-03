@@ -85,6 +85,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.duration {
+  width: 2.5rem;
+}
+
 #createTripBtn {
     margin: 2rem;
     font-weight: bold;
