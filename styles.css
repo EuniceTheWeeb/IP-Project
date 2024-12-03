@@ -153,3 +153,12 @@ input[type="checkbox"] {
   margin-right: 10px;
   /* Optional margin between cards */
 }
+
+
+/* MARK: media query */
+@media (min-width: 768px) {
+  
+}
+@media (min-width: 992px) {
+
+}
