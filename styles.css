@@ -1,88 +1,123 @@
 :root {
-    --bs-primary: #1F6AC1;  /* Primary Color */
-    --bs-secondary: #1C411C; /* Secondary Color */
-    --bs-accent: #f5e9cc;    /* Accent Color */
-    --bs-neutral-light: #FFC571; /* Neutral Light Color */
-    --bs-neutral-dark: black;  /* Neutral Dark Color */
+  --bs-primary: #1F6AC1;
+  --bs-secondary: #2c5e2c;
+  --bs-accent: #f5e6cf;
+  --bs-neutral-light: #FFC571;
+  --bs-neutral-dark: black;
 }
 
 * {
   margin: 0;
 }
-
-/* Body Background Color */
 body {
-    color: var(--bs-neutral-dark);
-  }
-  
-  /* Navbar using primary color */
-  .navbar {
-    background-color: var(--bs-primary);
-  }
-  
-  button {
-    color: var(--bs-neutral-light);
-    cursor: pointer;
-  }
+  padding-top: 3.75rem;
+}
 
-  /* Primary buttons */
-  .btn-primary {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-  }
-  
-  /* Secondary buttons */
-  .btn-secondary {
-    background-color: var(--bs-secondary);
-    border-color: var(--bs-secondary);
-  }
-  
-  /* Accent text */
-  h1, h2, h3, .highlight-text {
-    color: var(--bs-neutral-dark);
-    margin: 1rem;
-  }
+/* MARK: Navbar */
+.navbar {
+  background-color: var(--bs-accent)!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem;
+}
+.navbar-toggler {
+  background-color: var(--bs-neutral-light);
+}
+.active {
+  font-weight: bold;
+}
 
-  #toAddPg {
-    font-weight: bold;
-    margin: 2rem auto;
-  }
+/* buttons */
+button {
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
 
-  table {
-    margin: 2rem 0;
-  }
+.btn-primary {
+  background-color: var(--bs-primary)!important;
+  border-color: var(--bs-primary)!important;
+}
+.btn-primary:focus, .btn-primary:active {
+  color: var(--bs-neutral-light)!important;
+}
 
-  #prev,
-  #next {
-    font-size: 20px;
-  }
-  #prev {
-    margin-left: 2rem;
-  }
-  #next {
-    margin-right: 2rem;
-  }
+.btn-secondary {
+  background-color: var(--bs-secondary)!important;
+  border-color: var(--bs-secondary)!important;
+}
+.btn-secondary:focus, .btn-secondary:active {
+  background-color: var(--bs-neutral-dark)!important; 
+  border-color: var(--bs-neutral-dark)!important; 
+}
 
-  label {
-    cursor: pointer;
-  }
+/* Accent text */
+h1, h2, h3,
+.highlight-text {
+  color: var(--bs-neutral-dark);
+  margin: 1rem;
+}
 
-  input {
-   margin: .5rem; 
-   cursor: pointer;
-  }
+/* MARK: index pg */
+#toAddPg {
+  font-weight: bold;
+  margin: 2rem auto;
+}
 
-  input[type="text"] {
-    width: 10rem;
-  }
+table {
+  width: 70%;
+  margin: 2rem 0;
+}
+td, th {
+  text-align: center;
+  width: 10%;
+  font-size: 12px;
+}
+ 
+thead {
+  color: var(--bs-secondary);
+}
+td:hover {
+  background-color: var(--bs-accent);
+}
 
-  input[type="checkbox"] {
-    width:20px;
-    height:20px;
-  }
+#prev,
+#next {
+  font-size: 12px;
+}
+
+#prev {
+  margin-left: 1rem;
+}
+
+#next {
+  margin-right: 1rem;
+}
+
+/* MARK: new-trip + trip */
+label {
+  cursor: pointer;
+}
+
+input {
+  margin: .5rem;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 10rem;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
 
 .travelInfo {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .duration {
@@ -90,21 +125,31 @@ body {
 }
 
 #createTripBtn {
-    margin: 2rem;
-    font-weight: bold;
+  margin: 2rem;
+  font-weight: bold;
 }
 
+/*  MARK: trip pg */
+#tripPg {
+  background-color: var(--bs-secondary);
+}
 
 /* Container for horizontal scroll */
 .card-container {
-  display: flex;                /* Align cards in a row */
-  overflow-x: auto;             /* Enable horizontal scroll */
-  white-space: nowrap;          /* Prevent cards from wrapping */
-  padding: 10px 0;              /* Optional padding for better appearance */
+  display: flex;
+  /* Align cards in a row */
+  overflow-x: auto;
+  /* Enable horizontal scroll */
+  white-space: nowrap;
+  /* Prevent cards from wrapping */
+  padding: 10px 0;
+  /* Optional padding for better appearance */
 }
 
 /* Make sure cards are displayed inline */
 .card {
-  flex: 0 0 auto;               /* Prevent cards from stretching */
-  margin-right: 10px;           /* Optional margin between cards */
+  flex: 0 0 auto;
+  /* Prevent cards from stretching */
+  margin-right: 10px;
+  /* Optional margin between cards */
 }

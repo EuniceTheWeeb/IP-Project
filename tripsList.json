@@ -2,7 +2,7 @@
     // MARK: 3D2N to Thailand
     {
         "id": 1,
-        "trip name": "3D2N Adventure in Thailand",
+        "trip name": "Thailand 3D2N Dec 2024",
         "going date": "2024-12-10",
         "return date": "2024-12-12",
         "going travel": {
@@ -80,38 +80,38 @@
     // MARK: 4D3N to Bali
     {
         "id": 2,
-        "trip name": "4D3N Bali Getaway",
-        "going date": "2024-12-15",
-        "return date": "2024-12-18",
+        "trip name": "Bali 4D3N Mar 2025",
+        "going date": "2025-03-15",
+        "return date": "2025-03-18",
         "going travel": {
             "undecided": false,
             "mode of transport": "ferry",
             "ferry number": "BALI123",
-            "departure date & time": "2024-12-15T10:30",
-            "arrival date & time": "2024-12-15T12:00",
+            "departure date & time": "2025-03-15T10:30",
+            "arrival date & time": "2025-03-15T12:00",
             "duration": {
                 "hours": "1",
                 "minutes": "30"
             },
-            "alert for upcoming travel": "2024-12-14T20:00"
+            "alert for upcoming travel": "2025-03-14T20:00"
         },
         "return travel": {
             "undecided": false,
             "mode of transport": "ferry",
             "ferry number": "BALI124",
-            "departure date & time": "2024-12-18T19:30",
-            "arrival date & time": "2024-12-18T21:00",
+            "departure date & time": "2025-03-18T19:30",
+            "arrival date & time": "2025-03-18T21:00",
             "duration": {
                 "hours": "1",
                 "minutes": "30"
             },
-            "alert for upcoming travel": "2024-12-18T14:00"
+            "alert for upcoming travel": "2025-03-18T14:00"
         },
         "accommodation": {
             "id": "H201",
             "name": "Bali Paradise Resort",
-            "check-in date": "2024-12-15",
-            "check-out date": "2024-12-18",
+            "check-in date": "2025-03-15",
+            "check-out date": "2025-03-18",
             "address": "Jl. Raya Ubud No. 45, Ubud, Bali, Indonesia",
             "website": "https://www.baliparadiseresort.com",
             "notes": "A luxury resort in the heart of Ubud, with stunning views of the rice terraces and close to cultural attractions."
@@ -120,7 +120,7 @@
             {
                 "id": "A201",
                 "activity name": "Visit Uluwatu Temple",
-                "date": "2024-12-15",
+                "date": "2025-03-15",
                 "category": "Sightseeing",
                 "address": "Pura Uluwatu, Pecatu, Bali",
                 "website": "https://www.puraundewatubali.com",
@@ -129,7 +129,7 @@
             {
                 "id": "A202",
                 "activity name": "Beach Day at Nusa Dua",
-                "date": "2024-12-16",
+                "date": "2025-03-16",
                 "category": "Sightseeing",
                 "address": "Nusa Dua, Bali, Indonesia",
                 "website": "https://www.nusadua.com",
@@ -138,7 +138,7 @@
             {
                 "id": "A203",
                 "activity name": "Balinese Spa and Massage",
-                "date": "2024-12-16",
+                "date": "2025-03-16",
                 "category": "Adventure",
                 "address": "Bali Orchid Spa, Seminyak",
                 "website": "https://www.baliorchidsparadise.com",
@@ -147,7 +147,7 @@
             {
                 "id": "A204",
                 "activity name": "Explore Sacred Monkey Forest Sanctuary",
-                "date": "2024-12-17",
+                "date": "2025-03-17",
                 "category": "Sightseeing",
                 "address": "Jl. Monkey Forest, Ubud, Bali",
                 "website": "https://www.monkeyforestubud.com",
@@ -156,7 +156,7 @@
             {
                 "id": "A205",
                 "activity name": "Sunset Dinner Cruise",
-                "date": "2024-12-17",
+                "date": "2025-03-17",
                 "category": "Food",
                 "address": "Bali Marina, Benoa, Bali",
                 "website": "https://www.balisunsetcruise.com",
@@ -165,7 +165,7 @@
             {
                 "id": "A206",
                 "activity name": "Visit Tegallalang Rice Terraces",
-                "date": "2024-12-18",
+                "date": "2025-03-18",
                 "category": "Sightseeing",
                 "address": "Tegallalang, Ubud, Bali",
                 "website": "https://www.balitourism.com/tegallalang-rice-terraces",
@@ -176,9 +176,9 @@
     // MARK: 7D6N to Australia
     {
         "id": 3,
-        "trip name": "7D6N Australia Adventure",
-        "going date": "2024-12-20",
-        "return date": "2024-12-27",
+        "trip name": "Australia 7D6N Jun 2025",
+        "going date": "2025-06-20",
+        "return date": "2025-06-27",
         "going travel": {
             "undecided": true,
             "mode of transport": "undecided",
@@ -209,8 +209,8 @@
             {
                 "id": "H301",
                 "name": "Sydney Harbour Hotel",
-                "check-in date": "2024-12-20",
-                "check-out date": "2024-12-23",
+                "check-in date": "2025-06-20",
+                "check-out date": "2025-06-23",
                 "address": "123 Sydney Harbour Road, Sydney, Australia",
                 "website": "https://www.sydneyharbourhotel.com.au",
                 "notes": "A luxury hotel with stunning views of Sydney Opera House, located near major attractions like the Royal Botanic Gardens and Circular Quay."
@@ -218,8 +218,8 @@
             {
                 "id": "H302",
                 "name": "Melbourne City Retreat",
-                "check-in date": "2024-12-23",
-                "check-out date": "2024-12-27",
+                "check-in date": "2025-06-23",
+                "check-out date": "2025-06-27",
                 "address": "456 Collins Street, Melbourne, Australia",
                 "website": "https://www.melbournecityretreat.com.au",
                 "notes": "Modern boutique hotel in the heart of Melbourne, with easy access to shopping, dining, and the Melbourne Zoo."
@@ -229,7 +229,7 @@
             {
                 "id": "A301",
                 "activity name": "Sydney Opera House Tour",
-                "date": "2024-12-20",
+                "date": "2025-06-20",
                 "category": "Sightseeing",
                 "address": "Bennelong Point, Sydney, Australia",
                 "website": "https://www.sydneyoperahouse.com",
@@ -238,7 +238,7 @@
             {
                 "id": "A302",
                 "activity name": "Visit Bondi Beach",
-                "date": "2024-12-21",
+                "date": "2025-06-21",
                 "category": "Sightseeing",
                 "address": "Bondi Beach, Sydney, Australia",
                 "website": "https://www.bondibeach.org",
@@ -247,7 +247,7 @@
             {
                 "id": "A303",
                 "activity name": "Sydney Harbour Bridge Climb",
-                "date": "2024-12-21",
+                "date": "2025-06-21",
                 "category": "Adventure",
                 "address": "Sydney Harbour Bridge, Sydney, Australia",
                 "website": "https://www.bridgeclimb.com",
@@ -256,7 +256,7 @@
             {
                 "id": "A304",
                 "activity name": "Melbourne City Walking Tour",
-                "date": "2024-12-23",
+                "date": "2025-06-23",
                 "category": "Sightseeing",
                 "address": "Federation Square, Melbourne, Australia",
                 "website": "https://www.melbournewalkingtours.com",
@@ -265,7 +265,7 @@
             {
                 "id": "A305",
                 "activity name": "Visit Great Ocean Road",
-                "date": "2024-12-24",
+                "date": "2025-06-24",
                 "category": "Sightseeing",
                 "address": "Great Ocean Road, Melbourne, Australia",
                 "website": "https://www.greatoceanroad.com.au",
@@ -274,7 +274,7 @@
             {
                 "id": "A306",
                 "activity name": "Phillip Island Penguin Parade",
-                "date": "2024-12-25",
+                "date": "2025-06-25",
                 "category": "Sightseeing",
                 "address": "Phillip Island, Victoria, Australia",
                 "website": "https://www.penguinparade.com.au",
@@ -283,7 +283,7 @@
             {
                 "id": "A307",
                 "activity name": "Melbourne Zoo Visit",
-                "date": "2024-12-26",
+                "date": "2025-06-26",
                 "category": "Sightseeing",
                 "address": "Elliott Ave, Parkville, Melbourne, Australia",
                 "website": "https://www.zoo.org.au/melbourne",
