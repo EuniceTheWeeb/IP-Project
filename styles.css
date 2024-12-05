@@ -9,13 +9,15 @@
 * {
   margin: 0;
 }
+
 body {
-  padding-top: 3.75rem;
+  padding-top: 4rem;
+  overflow-x: hidden;
 }
 
 /* MARK: Navbar */
 .navbar {
-  background-color: var(--bs-accent)!important;
+  background-color: var(--bs-accent) !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,9 +25,11 @@ body {
   width: 100%;
   padding: 1rem;
 }
+
 .navbar-toggler {
   background-color: var(--bs-neutral-light);
 }
+
 .active {
   font-weight: bold;
 }
@@ -38,27 +42,37 @@ button {
 }
 
 .btn-primary {
-  background-color: var(--bs-primary)!important;
-  border-color: var(--bs-primary)!important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
 }
-.btn-primary:focus, .btn-primary:active {
-  color: var(--bs-neutral-light)!important;
+
+.btn-primary:focus,
+.btn-primary:active {
+  color: var(--bs-neutral-light) !important;
 }
 
 .btn-secondary {
-  background-color: var(--bs-secondary)!important;
-  border-color: var(--bs-secondary)!important;
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
 }
-.btn-secondary:focus, .btn-secondary:active {
-  background-color: var(--bs-neutral-dark)!important; 
-  border-color: var(--bs-neutral-dark)!important; 
+
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--bs-neutral-dark) !important;
+  border-color: var(--bs-neutral-dark) !important;
 }
 
 /* Accent text */
-h1, h2, h3,
+h1,
+h2,
+h3,
 .highlight-text {
   color: var(--bs-neutral-dark);
   margin: 1rem;
+}
+
+.card {
+  max-width: 100%;
 }
 
 /* MARK: index pg */
@@ -67,39 +81,67 @@ h1, h2, h3,
   margin: 2rem auto;
 }
 
+
 table {
-  width: 70%;
   margin: 2rem 0;
 }
-td, th {
+
+td,
+th {
   text-align: center;
   width: 10%;
   font-size: 12px;
 }
- 
+
 thead {
   color: var(--bs-secondary);
 }
+
 td:hover {
   background-color: var(--bs-accent);
+}
+
+#monthYear {
+  margin-left: 2rem;
 }
 
 #prev,
 #next {
   font-size: 12px;
-}
-
-#prev {
-  margin-left: 1rem;
+  padding: 8px;
 }
 
 #next {
-  margin-right: 1rem;
+  margin-right: 2rem;
+}
+
+/* MARK: new-trip */
+#tripName {
+  font-size: 24px;
+  width: 17.5rem;
+  margin-top: 1.5rem;
+}
+
+#createTripBtn {
+  width: 17.5rem;
+}
+
+.transport-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.container-class {
+  padding-bottom: 3rem;
 }
 
 /* MARK: new-trip + trip */
 label {
   cursor: pointer;
+  margin: 12px 0;
+  margin-right: 8px;
 }
 
 input {
@@ -117,7 +159,16 @@ input[type="checkbox"] {
 }
 
 .travelInfo {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+}
+
+.headerInfo {
+  background-color: var(--bs-accent);
+  padding: 0;
+}
+
+.bodyInfo {
+  border-color: var(--bs-accent);
 }
 
 .duration {
@@ -157,8 +208,100 @@ input[type="checkbox"] {
 
 /* MARK: media query */
 @media (min-width: 768px) {
-  
+  .col-md-6 {
+    max-width: 100%;
+  }
+
+  body {
+    padding-top: 6rem;
+  }
+
+  .btn-primary {
+    font-size: 24px;
+  }
+
+  .btn-secondary {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 24px;
+  }
+
+  #monthYear {
+    font-size: 28px;
+    margin-left: 5rem;
+  }
+
+  td,
+  th,
+  #prev,
+  #next {
+    font-size: 16px;
+  }
+
+  #prev,
+  #next {
+    width: 4rem;
+  }
+
+  #prev {
+    margin-left: 10rem;
+  }
+
+  #next {
+    margin-right: 2.5rem;
+  }
+
+  #createTripBtn {
+    width: 20rem;
+  }
+
+  label {
+    margin-right: 0;
+  }
 }
+
 @media (min-width: 992px) {
 
+  .btn-primary {
+    font-size: 32px;
+  }
+
+  .btn-secondary {
+    font-size: 20px;
+  }
+
+  #monthYear {
+    margin-left: 5rem;
+    font-size: 32px;
+  }
+
+  td,
+  th,
+  #prev,
+  #next {
+    font-size: 20px;
+  }
+
+  #prev,
+  #next {
+    width: 5rem;
+  }
+
+  #prev {
+    margin-left: 20rem;
+  }
+
+  #next {
+    margin-right: 2.5rem;
+  }
+
+  #tripName {
+    width: 20rem;
+  }
+
+  .nav-item {
+    padding: 0 2rem;
+  }
 }

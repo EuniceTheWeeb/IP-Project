@@ -11,128 +11,194 @@
 </head>
 
 <body>
-    <div class="justify-content-between align-items-center col-8 mx-auto" id="baseDate">
-        <h1>Planning New Trip</h1>
-        <input type="text" placeholder="Trip Name" id="tripName"><br>
-        <label>Going date</label>
-        <input type="date">
-        <label>Return date</label>
-        <input type="date">
+    <!-- MARK: navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new-trip.html">New Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-center col-8 mx-auto">
+        <div class="text-center">
+            <h1 class="d-flex justify-content-center">Planning New Trip</h1>
+            <input type="text" placeholder="Trip Name" id="tripName"><br>
+            <label>Going date</label>
+            <input type="date">
+            <label>Return date</label>
+            <input type="date">
+        </div>
     </div>
 
-    <div class="justify-content-between align-items-center col-8 mx-auto">
-        <div class="card travelInfo">
-            <div class="card-header">
-                When are you going?
-            </div>
-            <div class="card-body">
-                <label>Undecided</label>
-                <input type="checkbox" id="goingCheck" class="check">
-                <div id="goingInfo" class="info">
-                    <label>Mode of Transport</label>
-                    <input type="radio" class="goingTransport transport" name="transport" value="Flight">
-                    <label for="flight">Flight</label>
-                    <input type="radio" class="goingTransport transport" name="transport" value="Ferry">
-                    <label for="ferry">Ferry</label>
-                    <input type="radio" class="goingTransport transport" name="transport" value="Train">
-                    <label for="train">Train</label>
-                    <input type="radio" class="goingTransport transport" name="transport" value="Bus">
-                    <label for="bus">Bus</label>
-                    <input type="radio" class="goingTransport transport" name="transport" value="Car">
-                    <label for="car">Car</label>
-                    <br>
 
-                    <div id="goingFlightNum">
-                        <label>Flight number</label>
-                        <input type="text">
+    <div class="row d-flex justify-content-center">
+        <!-- MARK: Going -->
+        <div class="col-8 col-lg-4 mb-auto">
+            <div class="card travelInfo">
+                <div class="card-header headerInfo d-flex justify-content-center">
+                    <h3>Going Information</h3>
+                </div>
+                <div class="card-body bodyInfo">
+                    <label>Undecided</label>
+                    <input type="checkbox" id="goingCheck" class="check">
+                    <div id="goingInfo" class="info">
+                        <label>Mode of Transport</label>
+                        <div class="transport-container">
+                            <div class="transport-item">
+                                <input type="radio" class="goingTransport transport" name="transport" value="Flight"
+                                    id="flight">
+                                <label for="flight">Flight</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="goingTransport transport" name="transport" value="Ferry"
+                                    id="ferry">
+                                <label for="ferry">Ferry</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="goingTransport transport" name="transport" value="Train"
+                                    id="train">
+                                <label for="train">Train</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="goingTransport transport" name="transport" value="Bus"
+                                    id="bus">
+                                <label for="bus">Bus</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="goingTransport transport" name="transport" value="Car"
+                                    id="car">
+                                <label for="car">Car</label>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div id="goingFlightNum">
+                            <label>Flight number</label>
+                            <input type="text">
+                        </div>
+                        <div id="goingFerryNum">
+                            <label>Ferry number</label>
+                            <input type="text">
+                        </div>
+                        <div id="goingBusNum">
+                            <label>Bus number</label>
+                            <input type="text">
+                        </div>
+
+                        <label>Departure Date & Time (local)</label>
+                        <input type="datetime-local" id="goingDateTime"><br>
+                        <label>Arrival Date & Time (destination)</label>
+                        <input type="datetime-local"><br>
+
+                        <label>Duration</label>
+                        <input type="number" class="duration">
+                        <label>hrs</label>
+                        <input type="number" class="duration">
+                        <label>min</label><br>
+
+                        <!-- need to modify for alert, btw 1 week to 24hrs -->
+                        <label>Alert for upcoming travel</label>
+                        <input type="datetime-local" id="goingAlert">
                     </div>
-                    <div id="goingFerryNum">
-                        <label>Ferry number</label>
-                        <input type="text">
-                    </div>
-                    <div id="goingBusNum">
-                        <label>Bus number</label>
-                        <input type="text">
-                    </div>
-
-                    <label>Departure Date & Time (local)</label>
-                    <input type="datetime-local" id="goingDateTime">
-                    <label>Arrival Date & Time (destination)</label>
-                    <input type="datetime-local"><br>
-
-                    <label>Duration</label>
-                    <input type="number" class="duration">
-                    <label>hours</label>
-                    <input type="number" class="duration">
-                    <label>min</label><br>
-
-                    <!-- need to modify for alert, btw 1 week to 24hrs -->
-                    <label>Alert for upcoming travel</label>
-                    <input type="datetime-local" id="goingAlert">
                 </div>
             </div>
         </div>
 
-        <div class="card travelInfo">
-            <div class="card-header">
-                When are you returning?
-            </div>
-            <div class="card-body">
-                <label>Undecided</label>
-                <input type="checkbox" id="returnCheck" class="check">
-                <div id="returnInfo" class="info">
-                    <label>Mode of Transport</label>
-                    <input type="radio" class="returnTransport transport" name="transport" value="Flight">
-                    <label for="flight">Flight</label>
-                    <input type="radio" class="returnTransport transport" name="transport" value="Ferry">
-                    <label for="ferry">Ferry</label>
-                    <input type="radio" class="returnTransport transport" name="transport" value="Train">
-                    <label for="train">Train</label>
-                    <input type="radio" class="returnTransport transport" name="transport" value="Bus">
-                    <label for="bus">Bus</label>
-                    <input type="radio" class="returnTransport transport" name="transport" value="Car">
-                    <label for="car">Car</label>
-                    <br>
+        <!-- MARK: Return -->
+        <div class="col-8 col-lg-4 mb-auto">
+            <div class="card travelInfo">
+                <div class="card-header headerInfo d-flex justify-content-center">
+                    <h3>Return Information</h3>
+                </div>
+                <div class="card-body bodyInfo">
+                    <label>Undecided</label>
+                    <input type="checkbox" id="returnCheck" class="check">
+                    <div id="returnInfo" class="info">
+                        <label>Mode of Transport</label>
+                        <div class="transport-container">
+                            <div class="transport-item">
+                                <input type="radio" class="returnTransport transport" name="transport" value="Flight"
+                                    id="flight">
+                                <label for="flight">Flight</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="returnTransport transport" name="transport" value="Ferry"
+                                    id="ferry">
+                                <label for="ferry">Ferry</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="returnTransport transport" name="transport" value="Train"
+                                    id="train">
+                                <label for="train">Train</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="returnTransport transport" name="transport" value="Bus"
+                                    id="bus">
+                                <label for="bus">Bus</label>
+                            </div>
+                            <div class="transport-item">
+                                <input type="radio" class="returnTransport transport" name="transport" value="Car"
+                                    id="car">
+                                <label for="car">Car</label>
+                            </div>
+                        </div>
 
-                    <div id="returnFlightNum">
-                        <label>Flight number</label>
-                        <input type="text">
+                        <br>
+
+                        <div id="returnFlightNum">
+                            <label>Flight number</label>
+                            <input type="text">
+                        </div>
+                        <div id="returnFerryNum">
+                            <label>Ferry number</label>
+                            <input type="text">
+                        </div>
+                        <div id="returnBusNum">
+                            <label>Bus number</label>
+                            <input type="text">
+                        </div>
+
+                        <label>Departure Date & Time (local)</label>
+                        <input type="datetime-local"><br>
+                        <label>Arrival Date & Time (destination)</label>
+                        <input type="datetime-local"><br>
+
+                        <label>Duration</label>
+                        <input type="number" class="duration">
+                        <label>hrs</label>
+                        <input type="number" class="duration">
+                        <label>min</label><br>
+
+                        <!-- need to modify for alert, btw 1 week to 24hrs -->
+                        <label>Alert for upcoming travel</label>
+                        <input type="datetime-local" id="returnAlert">
+
                     </div>
-                    <div id="returnFerryNum">
-                        <label>Ferry number</label>
-                        <input type="text">
-                    </div>
-                    <div id="returnBusNum">
-                        <label>Bus number</label>
-                        <input type="text">
-                    </div>
-
-                    <label>From</label>
-                    <input type="text">
-                    <label>To</label>
-                    <input type="text"><br>
-
-                    <label>Departure Date & Time (local)</label>
-                    <input type="datetime-local">
-                    <label>Arrival Date & Time (destination)</label>
-                    <input type="datetime-local"><br>
-
-                    <label>Duration</label>
-                    <input type="number" class="duration">
-                    <label>hours</label>
-                    <input type="number" class="duration">
-                    <label>min</label><br>
-
-                    <!-- need to modify for alert, btw 1 week to 24hrs -->
-                    <label>Alert for upcoming travel</label>
-                    <input type="datetime-local" id="returnAlert">
-
                 </div>
             </div>
         </div>
     </div>
 
-    <a class="btn btn-primary btn-lg mx-auto d-block w-50" role="button" id="createTripBtn">Create Trip</a>
+    <div class="container-class">
+        <a class="btn btn-primary btn-lg mx-auto d-block" role="button" id="createTripBtn">Create Trip</a>
+    </div>
 
 
     <script src="script.js"></script>
