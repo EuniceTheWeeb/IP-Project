@@ -1,45 +1,63 @@
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const date = new Date();
-// console.log(date);
+document.addEventListener("DOMContentLoaded", function renderCalendar() {
 
-let thisDate = date.getDate(); // getDate()	Returns the day of the month (from 1-31)
-let thisDay = date.getDay(); // getDay()	Returns the day of the week (from 0-6)
-let month = date.getMonth(); // getMonth()	Returns the month (from 0-11)
-let year = date.getFullYear(); // getFullYear()	Returns the year
-let monthName = months[month];
-document.querySelector("#monthYear").innerHTML = `${monthName} ${year}`;
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let date = new Date();
 
-function renderCalendar() {
+    function updateCalendar() {
+        // getDate()	Returns the day of the month (from 1-31)
+        let month = date.getMonth(); // getMonth()	Returns the month (from 0-11)
+        let year = date.getFullYear(); // getFullYear()	Returns the year
+        let monthName = months[month];
 
-    let firstDate = new date(year, month, 1);
-    let lastDate = new date(year, month + 1, 0);
-    let totalDays = lastDate.getDate();
-    let startDay = firstDate.getDay();
-    console.log(firstDate)
+        document.querySelector("#monthYear").innerHTML = `${monthName} ${year}`;
 
-    const calendar = document.querySelector("#calendarBody");
-    calendar.innerHTML = "";
-    let tr = document.createElement('tr');
+        // Get the first and last date of the month
+        let firstDate = new Date(year, month, 1); // 1 is 1st day of mth
+        let lastDate = new Date(year, month + 1, 0); // mth + 1: going to next mth, 0 is prev mth's last day
+        let totalDays = lastDate.getDate();
+        let startDay = firstDate.getDay();
 
-    const calendarEl = document.querySelector("#monthYear");
-    let dayCounter = 1;
-    for (let i = 1; i <= 31; i++) {
-        console.log(i);
+        // Clear calendar body
+        const calendar = document.querySelector("#calendarBody");
+        calendar.innerHTML = "";
+
+
+        // Add empty cells for the days before the first day of the month
+        let oneWeek = document.createElement("tr");
+        for (let i = 0; i < startDay; i++) {
+            oneWeek.appendChild(document.createElement('td'));
+        };
+
+        // Loop through all the days and add to calendar table
+        for (let d = 1; d <= totalDays; d++) {
+            let oneDay = document.createElement('td');
+            oneDay.textContent = d;
+            oneWeek.appendChild(oneDay);
+
+            // once the whole week is filled, create a new tr
+            if (oneWeek.children.length === 7) {
+                calendar.appendChild(oneWeek);
+                oneWeek = document.createElement("tr");
+            };
+        };
+
+        // Any leftover days, append to the final week
+        if (oneWeek.children.length > 0) {
+            calendar.appendChild(oneWeek);
+        }
     }
 
-}
+    updateCalendar();
 
+    // go to prev & next mths
+    document.querySelector("#prev").addEventListener("click", function () {
+        date.setMonth(date.getMonth() - 1);
+        updateCalendar();
+    });
 
+    document.querySelector("#next").addEventListener("click", function () {
+        date.setMonth(date.getMonth() + 1);
+        updateCalendar();
+    });
 
-document.querySelector("#prev").addEventListener("click", function () {
-    date.setMonth(date.getMonth() - 1);
-    renderCalendar(date);
 });
-
-document.querySelector("#next").addEventListener("click", function () {
-    date.setMonth(date.getMonth() + 1);
-    renderCalendar(date);
-});
-
-renderCalendar(date);
