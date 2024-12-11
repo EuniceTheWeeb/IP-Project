@@ -82,12 +82,18 @@ document.querySelectorAll(".returnTransport").forEach(function (radio) {
 });
 checkReturn();
 
-// alert for upcoming flight
+
 
 
 
 
 
 // create trip btn
+
+
+// read trip btn
+
+
+
 
 

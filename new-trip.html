@@ -37,12 +37,11 @@
 
     <div class="d-flex justify-content-center align-items-center col-8 mx-auto">
         <div class="text-center">
-            <h1 class="d-flex justify-content-center">Planning New Trip</h1>
-            <input type="text" placeholder="Trip Name" id="tripName"><br>
-            <label>Going date</label>
-            <input type="date">
-            <label>Return date</label>
-            <input type="date">
+            <h1 class="d-flex justify-content-center">Planning New Trip
+            </h1>
+            <h2><input type="text" placeholder="Trip Name" class="tripName">
+                @
+                <input type="text" placeholder="Location" class="tripName"></h2><br>
         </div>
     </div>
 
@@ -112,10 +111,6 @@
                         <label>hrs</label>
                         <input type="number" class="duration">
                         <label>min</label><br>
-
-                        <!-- need to modify for alert, btw 1 week to 24hrs -->
-                        <label>Alert for upcoming travel</label>
-                        <input type="datetime-local" id="goingAlert">
                     </div>
                 </div>
             </div>
@@ -185,11 +180,6 @@
                         <label>hrs</label>
                         <input type="number" class="duration">
                         <label>min</label><br>
-
-                        <!-- need to modify for alert, btw 1 week to 24hrs -->
-                        <label>Alert for upcoming travel</label>
-                        <input type="datetime-local" id="returnAlert">
-
                     </div>
                 </div>
             </div>

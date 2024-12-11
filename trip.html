@@ -10,108 +10,350 @@
   <title>Trip</title>
 </head>
 
-<body id="tripPg">
-  <h1 id="tripName">trip name</h1>
+<body>
+  <!-- MARK: navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new-trip.html">New Trip</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Edit
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <h4 class="dropdown-item delete">Delete</h4>
+          </li>
+          <li><a class="dropdown-item delete" id="delCards" href="#">Selected Cards</a></li>
+          <li><a class="dropdown-item delete" id="delTrip" href="#">Entire Trip</a></li>
+          <!-- Add alert -->
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <h4 class="dropdown-item">Add</h4>
+          </li>
+          <li><a class="dropdown-item" id="addCards" href="#">Activity Card</a></li>
+          <li><a class="dropdown-item" id="addDateCol" href="#">Date column</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Dropdown button
+
+  <div class="container d-flex justify-content-center align-items-center col-12 mx-auto">
+    <div class="text-center">
+      <h1 class="d-flex justify-content-center">
+        Trip Itinerary
+      </h1>
+      <h2><input type="text" placeholder="Trip Name" class="tripName">
+        @
+        <input type="text" placeholder="Location" class="tripName">
+      </h2>
+
+      <!-- MARK: Departure & Arrival modal -->
+      <div class="col-12">
+        <button type="button" class="btn btn-secondary checkTravelInfo" data-bs-toggle="modal" data-bs-target="#modal2">
+          Departure & Arrival Info
+        </button>
+      </div>
+
+      <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal2Label">Going Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label>Undecided</label>
+              <input type="checkbox" id="goingCheck" class="check">
+              <div id="goingInfo" class="info">
+                <label>Mode of Transport</label>
+                <div class="transport-container">
+                  <div class="transport-item">
+                    <input type="radio" class="goingTransport transport" name="transport" value="Flight" id="flight">
+                    <label for="flight">Flight</label>
+                  </div>
+                  <div class="transport-item">
+                    <input type="radio" class="goingTransport transport" name="transport" value="Ferry" id="ferry">
+                    <label for="ferry">Ferry</label>
+                  </div>
+                  <div class="transport-item">
+                    <input type="radio" class="goingTransport transport" name="transport" value="Train" id="train">
+                    <label for="train">Train</label>
+                  </div>
+                  <div class="transport-item">
+                    <input type="radio" class="goingTransport transport" name="transport" value="Bus" id="bus">
+                    <label for="bus">Bus</label>
+                  </div>
+                  <div class="transport-item">
+                    <input type="radio" class="goingTransport transport" name="transport" value="Car" id="car">
+                    <label for="car">Car</label>
+                  </div>
+                </div>
+
+                <br>
+
+                <div id="goingFlightNum">
+                  <label>Flight number</label>
+                  <input type="text">
+                </div>
+                <div id="goingFerryNum">
+                  <label>Ferry number</label>
+                  <input type="text">
+                </div>
+                <div id="goingBusNum">
+                  <label>Bus number</label>
+                  <input type="text">
+                </div>
+
+                <label>Departure Date & Time (local)</label>
+                <input type="datetime-local" id="goingDateTime"><br>
+                <label>Arrival Date & Time (destination)</label>
+                <input type="datetime-local"><br>
+
+                <label>Duration</label>
+                <input type="number" class="duration">
+                <label>hrs</label>
+                <input type="number" class="duration">
+                <label>min</label><br>
+              </div>
+              <br>
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal3Label">Return Information</h5>
+              </div>
+              <div class="modal-body">
+                <label>Undecided</label>
+                <input type="checkbox" id="returnCheck" class="check">
+                <div id="returnInfo" class="info">
+                  <label>Mode of Transport</label>
+                  <div class="transport-container">
+                    <div class="transport-item">
+                      <input type="radio" class="returnTransport transport" name="transport" value="Flight" id="flight">
+                      <label for="flight">Flight</label>
+                    </div>
+                    <div class="transport-item">
+                      <input type="radio" class="returnTransport transport" name="transport" value="Ferry" id="ferry">
+                      <label for="ferry">Ferry</label>
+                    </div>
+                    <div class="transport-item">
+                      <input type="radio" class="returnTransport transport" name="transport" value="Train" id="train">
+                      <label for="train">Train</label>
+                    </div>
+                    <div class="transport-item">
+                      <input type="radio" class="returnTransport transport" name="transport" value="Bus" id="bus">
+                      <label for="bus">Bus</label>
+                    </div>
+                    <div class="transport-item">
+                      <input type="radio" class="returnTransport transport" name="transport" value="Car" id="car">
+                      <label for="car">Car</label>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div id="returnFlightNum">
+                    <label>Flight number</label>
+                    <input type="text">
+                  </div>
+                  <div id="returnFerryNum">
+                    <label>Ferry number</label>
+                    <input type="text">
+                  </div>
+                  <div id="returnBusNum">
+                    <label>Bus number</label>
+                    <input type="text">
+                  </div>
+
+                  <label>Departure Date & Time (local)</label>
+                  <input type="datetime-local"><br>
+                  <label>Arrival Date & Time (destination)</label>
+                  <input type="datetime-local"><br>
+
+                  <label>Duration</label>
+                  <input type="number" class="duration">
+                  <label>hrs</label>
+                  <input type="number" class="duration">
+                  <label>min</label><br>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="d-flex overflow-auto allDates">
+
+      <!-- First Card -->
+      <div class="col-8 col-md-4 dateCard">
+        <div class="card activityCol">
+          <div class="card-header activityCol">
+            <h3 class="card-title text-center dateColumn">
+              Date
+            </h3>
+          </div>
+          <div class="card-body-activity">
+            <a class="btn btn-primary activity d-flex justify-content-center align-items-center newActivity"
+              title="Add New Activity" href="#">+ Activity</a><br>
+            <p>Some additional content here. Some additional content here. Some additional content here. Some additional
+              content here.</p>
+            <p>More content. More content. More content. More content.</p>
+
+            <!-- MARK: activity modal -->
+            <div>
+              <input type="checkbox" class="form-check-input ms-2 modalTickBox" />
+
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary activityCardBtn" data-bs-toggle="modal"
+                  data-bs-target="#actModal">
+
+                  Activity card
+                </button>
+              </div>
+
+              <div class="modal fade" id="actModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">
+                        <input type="text" class="form-control" placeholder="Activity name">
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <label>Date</label>
+                      <input type="date" class="form-control" id="activityDate">
+
+                      <label>Category</label>
+                      <select name="category" id="category" class="form-control">
+                        <option value="" disabled selected>Select category</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Food">Food</option>
+                        <option value="Sightseeing">Sightseeing</option>
+                        <option value="Museum">Museum</option>
+                        <option value="Adventure">Adventure</option>
+                      </select><br>
+
+                      <label>Address</label>
+                      <textarea class="form-control" rows="3" id="activityAddress"></textarea>
+
+                      <label>Website</label>
+                      <textarea class="form-control" rows="2" id="activitySite"></textarea>
+                      <button class="btn btn-primary toSiteBtn">Go to site</button><br>
+
+                      <label>Notes</label>
+                      <textarea class="form-control" rows="3" id="activityNotes"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger">Delete this card</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="col-8 col-md-4 dateCard">
+        <div class="card activityCol">
+          <div class="card-header activityCol">
+            <h3 class="card-title text-center dateColumn">
+              Date
+            </h3>
+          </div>
+          <div class="card-body-activity">
+            <a class="btn btn-primary activity d-flex justify-content-center align-items-center newActivity"
+              title="Add New Activity" href="#">+ Activity</a><br>
+            <p>Some additional content here. Some additional content here. Some additional content here. Some additional
+              content here.</p>
+            <p>More content. More content. More content. More content.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Card -->
+      <div class="col-8 col-md-4 dateCard">
+        <div class="card activityCol">
+          <div class="card-header activityCol">
+            <h3 class="card-title text-center dateColumn">
+              Date
+            </h3>
+          </div>
+          <div class="card-body-activity">
+            <a class="btn btn-primary activity d-flex justify-content-center align-items-center newActivity"
+              title="Add New Activity" href="#">+ Activity</a><br>
+            <p>Some additional content here. Some additional content here. Some additional content here. Some additional
+              content here.</p>
+            <p>More content. More content. More content. More content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARK: date column modal -->
+  <div class="col-12 d-flex justify-content-center align-items-center">
+    <button type="button" class="btn btn-primary activityCardBtn" data-bs-toggle="modal" data-bs-target="#colModal">
+      Add new date column
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><h3 class="dropdown-item">Mark selected as</h3></li>
-      <li><a class="dropdown-item" id="markCards" href="#">Done</a></li>
-      <li><a class="dropdown-item" id="delCards" href="#">Deleted</a></li>
-      <li><h3 class="dropdown-item">Mark trip as</h3></li>
-      <li><a class="dropdown-item" id="markTrip" href="#">Done</a></li>
-      <li><a class="dropdown-item" id="delTrip" href="#">Deleted</a></li>
-      <!-- add alert, then go back to home -->
-    </ul>
-    <button class="btn btn-primary">icon</button>
   </div>
 
-  <div class="card">
-    <div class="card-header">
-      <h2>Add new card</h2>
-    </div>
-    <a class="btn btn-primary activity" title="Add New Activity" href="#">+ activity</a><br>
-    <!-- btn CTA: + (activity logo) -->
-    <a class="btn btn-primary accommodation" title="Add New Accommodation" href="#">+ hotel</a>
-    <!-- btn CTA: + (hotel logo) -->
-  </div>
-  </div>
-
-  <div class="card hotelCard">
-    <div class="card-header">
-      <input type="checkbox" class="selectCard">
-      <label> Accommodation: </h2>
-        <input type="text">
-    </div>
-    <div class="card-body">
-
-      <label>Check-in Date</label>
-      <input type="date"><br>
-      <label>Check-out Date</label>
-      <input type="date"><br>
-
-      <label>Address</label>
-      <input type="text">
-      <button class="btn btn-primary markerBtn">Mark on map</button>
-      <br>
-
-      <label>Website</label>
-      <input type="text">
-      <button class="btn btn-primary toSiteBtn">Go to site</button><br>
-
-      <label>Notes</label>
-      <input type="input"><br>
-
-      <a href="#" class="btn btn-primary saveBtn">Save card</a>
-      <!-- blur eventlistener -->
-      <a href="#" class="btn btn-primary editBtn">Edit card</a>
+  <div class="modal fade" id="colModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            Adding New Date Column
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label>Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add new column</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card activityCard">
-    <div class="card-header">
-      <input type="checkbox" class="selectCard">
-      <label>Activity: </h2>
-        <input type="text">
-    </div>
 
-    <div class="card-body">
-      <label>Date</label>
-      <input type="date">
-
-      <select name="category" id="category">
-        <option value="Shopping">Shopping</option>
-        <option value="Food">Food</option>
-        <option value="Sightseeing">Sightseeing</option>
-        <option value="Museum">Museum</option>
-        <option value="Adventure">Adventure</option>
-      </select><br>
-
-      <label>Address</label>
-      <input type="text">
-      <button class="btn btn-primary markerBtn">Mark on map</button>
-      <br>
-
-      <label>Website</label>
-      <input type="text">
-      <button class="btn btn-primary toSiteBtn">Go to site</button><br>
-
-      <label>Notes</label>
-      <input type="input"><br>
-
-      <a href="#" class="btn btn-primary saveBtn">Save card</a>
-      <a href="#" class="btn btn-primary editBtn">Edit card</a>
-    </div>
-  </div>
-
-  <section class="bsb-timeline-4 bg-success">
-    <div class="container"></div>
-  </section>
-
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>

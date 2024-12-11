@@ -12,7 +12,6 @@
 
 body {
   padding-top: 4rem;
-  overflow-x: hidden;
 }
 
 /* MARK: Navbar */
@@ -117,7 +116,7 @@ td:hover {
 }
 
 /* MARK: new-trip */
-#tripName {
+.tripName {
   font-size: 24px;
   width: 17.5rem;
   margin-top: 1.5rem;
@@ -140,7 +139,6 @@ td:hover {
 
 /* MARK: new-trip + trip */
 label {
-  cursor: pointer;
   margin: 12px 0;
   margin-right: 8px;
 }
@@ -182,33 +180,58 @@ input[type="checkbox"] {
 }
 
 /*  MARK: trip pg */
-#tripPg {
-  background-color: var(--bs-secondary);
+.checkTravelInfo {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  font-size: 24px;
 }
 
-/* Container for horizontal scroll */
-.card-container {
-  display: flex;
-  /* Align cards in a row */
-  overflow-x: auto;
-  /* Enable horizontal scroll */
-  white-space: nowrap;
-  /* Prevent cards from wrapping */
-  padding: 10px 0;
-  /* Optional padding for better appearance */
+.delete {
+  color: red;
 }
 
-/* Make sure cards are displayed inline */
-.card {
+.dateCard {
+  margin: 1rem 1.5rem;
+}
+
+.activityCol {
+  background-color: var(--bs-neutral-light);
+  border-color: var(--bs-primary);
+  width: 100%; 
+}
+
+.card-body-activity {
+  background-color: var(--bs-accent);
+  padding: 1rem;
+  max-height: 756px; 
+  overflow-y: auto;
+}
+
+.allDates {
+  flex-wrap: nowrap;
+}
+
+.newActivity, .activityCard {
+  font-size: 16px;
+}
+
+.activityCard {
   flex: 0 0 auto;
-  /* Prevent cards from stretching */
-  margin-right: 10px;
-  /* Optional margin between cards */
+  padding: 3rem 1rem;
 }
 
+.activityCardBtn {
+  margin: 0 1rem;
+}
+
+/* MARK: map */
+#map {
+  height: 100vh;
+  width: auto;
+}
 
 /* MARK: media query */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .col-md-6 {
     max-width: 100%;
   }
@@ -296,10 +319,6 @@ input[type="checkbox"] {
 
   #next {
     margin-right: 2.5rem;
-  }
-
-  #tripName {
-    width: 20rem;
   }
 
   .nav-item {

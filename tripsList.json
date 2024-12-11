@@ -29,18 +29,9 @@
             },
             "alert for upcoming travel": "2024-12-11T20:30"
         },
-        "accommodation": {
-            "id": "H101",
-            "name": "Bangkok Riverside Hotel",
-            "check-in date": "2024-12-10",
-            "check-out date": "2024-12-12",
-            "address": "123 Chao Phraya River, Bangkok, Thailand",
-            "website": "https://www.bangkokriversidehotel.com",
-            "notes": "A luxury hotel by the river with amazing views of the city and close to cultural sites."
-        },
         "activities": [
             {
-                "id": "A101",
+                "id": "1001",
                 "activity name": "Visit Grand Palace",
                 "date": "2024-12-10",
                 "category": "Sightseeing",
@@ -49,7 +40,7 @@
                 "notes": "Explore the iconic Grand Palace and the Emerald Buddha Temple."
             },
             {
-                "id": "A102",
+                "id": "1002",
                 "activity name": "Explore Chatuchak Market",
                 "date": "2024-12-11",
                 "category": "Shopping",
@@ -58,7 +49,7 @@
                 "notes": "A famous weekend market offering everything from clothes to food and art."
             },
             {
-                "id": "A103",
+                "id": "1003",
                 "activity name": "Thai Food Cooking Class",
                 "date": "2024-12-11",
                 "category": "Food",
@@ -67,7 +58,7 @@
                 "notes": "Learn how to cook authentic Thai dishes from professional chefs."
             },
             {
-                "id": "A104",
+                "id": "1004",
                 "activity name": "Visit Ayutthaya Historical Park",
                 "date": "2024-12-12",
                 "category": "Sightseeing",
@@ -107,18 +98,9 @@
             },
             "alert for upcoming travel": "2025-03-18T14:00"
         },
-        "accommodation": {
-            "id": "H201",
-            "name": "Bali Paradise Resort",
-            "check-in date": "2025-03-15",
-            "check-out date": "2025-03-18",
-            "address": "Jl. Raya Ubud No. 45, Ubud, Bali, Indonesia",
-            "website": "https://www.baliparadiseresort.com",
-            "notes": "A luxury resort in the heart of Ubud, with stunning views of the rice terraces and close to cultural attractions."
-        },
         "activities": [
             {
-                "id": "A201",
+                "id": "2001",
                 "activity name": "Visit Uluwatu Temple",
                 "date": "2025-03-15",
                 "category": "Sightseeing",
@@ -127,7 +109,7 @@
                 "notes": "A cliffside temple overlooking the ocean, famous for its sunset views and traditional Kecak dance performances."
             },
             {
-                "id": "A202",
+                "id": "2002",
                 "activity name": "Beach Day at Nusa Dua",
                 "date": "2025-03-16",
                 "category": "Sightseeing",
@@ -136,7 +118,7 @@
                 "notes": "Enjoy the beautiful white-sand beaches and calm waters of Nusa Dua, ideal for swimming and relaxation."
             },
             {
-                "id": "A203",
+                "id": "2003",
                 "activity name": "Balinese Spa and Massage",
                 "date": "2025-03-16",
                 "category": "Adventure",
@@ -145,7 +127,7 @@
                 "notes": "Relax and rejuvenate with a traditional Balinese massage and spa treatment."
             },
             {
-                "id": "A204",
+                "id": "2004",
                 "activity name": "Explore Sacred Monkey Forest Sanctuary",
                 "date": "2025-03-17",
                 "category": "Sightseeing",
@@ -154,7 +136,7 @@
                 "notes": "Walk through the lush forest and interact with the playful long-tailed macaques at this sacred site."
             },
             {
-                "id": "A205",
+                "id": "2005",
                 "activity name": "Sunset Dinner Cruise",
                 "date": "2025-03-17",
                 "category": "Food",
@@ -163,7 +145,7 @@
                 "notes": "A luxurious evening cruise with dinner and spectacular views of Bali's coastline during sunset."
             },
             {
-                "id": "A206",
+                "id": "2006",
                 "activity name": "Visit Tegallalang Rice Terraces",
                 "date": "2025-03-18",
                 "category": "Sightseeing",
@@ -205,29 +187,9 @@
             },
             "alert for upcoming travel": ""
         },
-        "accommodation": [
-            {
-                "id": "H301",
-                "name": "Sydney Harbour Hotel",
-                "check-in date": "2025-06-20",
-                "check-out date": "2025-06-23",
-                "address": "123 Sydney Harbour Road, Sydney, Australia",
-                "website": "https://www.sydneyharbourhotel.com.au",
-                "notes": "A luxury hotel with stunning views of Sydney Opera House, located near major attractions like the Royal Botanic Gardens and Circular Quay."
-            },
-            {
-                "id": "H302",
-                "name": "Melbourne City Retreat",
-                "check-in date": "2025-06-23",
-                "check-out date": "2025-06-27",
-                "address": "456 Collins Street, Melbourne, Australia",
-                "website": "https://www.melbournecityretreat.com.au",
-                "notes": "Modern boutique hotel in the heart of Melbourne, with easy access to shopping, dining, and the Melbourne Zoo."
-            }
-        ],
         "activities": [
             {
-                "id": "A301",
+                "id": "3001",
                 "activity name": "Sydney Opera House Tour",
                 "date": "2025-06-20",
                 "category": "Sightseeing",
@@ -236,7 +198,7 @@
                 "notes": "Explore one of the most iconic buildings in the world with a guided tour of the Sydney Opera House."
             },
             {
-                "id": "A302",
+                "id": "3002",
                 "activity name": "Visit Bondi Beach",
                 "date": "2025-06-21",
                 "category": "Sightseeing",
@@ -245,7 +207,7 @@
                 "notes": "Relax and enjoy the surf at Sydney's most famous beach, with plenty of cafes and shopping nearby."
             },
             {
-                "id": "A303",
+                "id": "3003",
                 "activity name": "Sydney Harbour Bridge Climb",
                 "date": "2025-06-21",
                 "category": "Adventure",
@@ -254,7 +216,7 @@
                 "notes": "Climb the Sydney Harbour Bridge for stunning panoramic views of the city and harbor."
             },
             {
-                "id": "A304",
+                "id": "3004",
                 "activity name": "Melbourne City Walking Tour",
                 "date": "2025-06-23",
                 "category": "Sightseeing",
@@ -263,7 +225,7 @@
                 "notes": "Take a walking tour through Melbourne's laneways, street art, and historic landmarks."
             },
             {
-                "id": "A305",
+                "id": "3005",
                 "activity name": "Visit Great Ocean Road",
                 "date": "2025-06-24",
                 "category": "Sightseeing",
@@ -272,7 +234,7 @@
                 "notes": "Enjoy a scenic drive along one of the most beautiful coastal roads in the world."
             },
             {
-                "id": "A306",
+                "id": "3006",
                 "activity name": "Phillip Island Penguin Parade",
                 "date": "2025-06-25",
                 "category": "Sightseeing",
@@ -281,7 +243,7 @@
                 "notes": "Watch the adorable little penguins return to their burrows after a day at sea."
             },
             {
-                "id": "A307",
+                "id": "3007",
                 "activity name": "Melbourne Zoo Visit",
                 "date": "2025-06-26",
                 "category": "Sightseeing",
